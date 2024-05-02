@@ -11,3 +11,7 @@ options.txt
 minecraftinstance.json
 /logs
 /local
+kubejs/jsconfig.json
+kubejs/README.txt
+/kubejs/config
+/screenshots
