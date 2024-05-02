@@ -1,0 +1,13 @@
+
+.curseclient
+/.vscode
+/config
+usercache.json
+usernamecache.json
+/saves
+rhino.local.properties
+options.txt
+/mods
+minecraftinstance.json
+/logs
+/local
