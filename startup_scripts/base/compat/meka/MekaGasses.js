@@ -1,3 +1,4 @@
+//priority 9
 let $EventBuses,
   $GasDeferredRegister,
   $GasAttributes,
