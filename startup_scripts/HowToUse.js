@@ -10,7 +10,7 @@ global.client.DefaultTooltip = true
 //## --------------------Tooltip-------------------- ##//
 /* Toggle of default disabled items to show a fancy tooltip
 */
-global.any.enableExamples = false
+global.any.enableExamples = true
 
 
 
