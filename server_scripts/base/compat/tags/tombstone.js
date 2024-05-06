@@ -1,10 +1,10 @@
-if (global.mod.tombstone)
+if (global.startup.mods.tombstone)
   ServerEvents.tags("item", (event) => {
     //event.removeAll("tombstone:voodoo_poppet_ingredients")
     //event.add("tombstone:voodoo_poppet_ingredients", <item-id>);
   });
 
-  /*
+/*
   TOMBSTONE ITEM TAG
   tombstone:voodoo_poppet_ingredients
   tombstone:voodoo_poppet_ingredient_suffocation
@@ -14,4 +14,4 @@ if (global.mod.tombstone)
   tombstone:voodoo_poppet_ingredient_cold
   */
 
-  //note: if one of this item tag still missing , tombstone send on crash
+//note: if one of this item tag still missing , tombstone send on crash
