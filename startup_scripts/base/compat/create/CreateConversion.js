@@ -1,3 +1,4 @@
+//priority 9
 let $MysteriousItemConversionCategory, $ConversionRecipe;
 
 if (global.startup.mods.create) {
