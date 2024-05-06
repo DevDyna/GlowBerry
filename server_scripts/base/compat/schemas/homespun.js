@@ -1,4 +1,10 @@
 if (global.startup.mods.homespun) {
+  global.server.recipes.compat = {
+    homespun : {
+      crushing: ()=>{},
+      evaporating: ()=>{}
+    }
+  }
   ServerEvents.recipes((event) => {
     global.server.recipes.compat.homespun.crushing = function crushing(
       input,
