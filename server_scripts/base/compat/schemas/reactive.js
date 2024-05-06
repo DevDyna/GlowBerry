@@ -1,12 +1,5 @@
 if (global.startup.mods.reactive) {
   ServerEvents.recipes((event) => {
-
-    global.server.recipes.compat = {
-      reactive : {
-        transmute: ()=>{}
-      }
-    }
-
     /**
      *
      * @param {item} input
