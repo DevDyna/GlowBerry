@@ -1,4 +1,4 @@
-ServerEvents.recipes((event) => {
+//ServerEvents.recipes((event) => {
 /*
 *	Template file of how to replace any recipe using forge item tags
 *		to unify ingots , blocks , dusts and nuggets when need
@@ -101,4 +101,4 @@ ServerEvents.recipes((event) => {
 //       unify.dust[i]
 //     );
 //   }
-});
+//});
