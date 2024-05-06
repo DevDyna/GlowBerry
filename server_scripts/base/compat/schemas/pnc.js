@@ -1,5 +1,14 @@
 if (global.startup.mods.pnc) {
   ServerEvents.recipes((event) => {
+    global.server.recipes.compat = {
+      pnc : {
+        assembly: {
+          drill : ()=>{},
+          laser : ()=>{},
+          drill_laser : ()=>{},
+        }
+      }
+    }
     global.server.recipes.compat.pnc.assembly.drill = function drill(
       input,
       output,
