@@ -1,4 +1,4 @@
-if (global.mod.reactive)
+if (global.startup.mods.reactive)
   ServerEvents.tags("item", (event) => {
     //event.removeAll("reactive:mind_sources")
     //event.add("reactive:body_sources", <item-id>);
