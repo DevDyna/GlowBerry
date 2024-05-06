@@ -232,13 +232,5 @@ if (global.startup.mods.ae2) {
         },
       });
     };
-  
-  
-  
-  
-  
-  
-  
-  
   });
 }
