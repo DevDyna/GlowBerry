@@ -1,3 +1,4 @@
+//priority 10
 ServerEvents.recipes((event) => {
   //------------------------------------------------------------------------------------------//
   /**
@@ -6,7 +7,7 @@ ServerEvents.recipes((event) => {
    * @param {item} output
    * @param {boolean} food when true return as a food item | when false return as a ore item
    */
-  global.server.recipes.vanilla_smelt = function vanilla_smelt(
+  global.server.recipes.processing.vanilla_smelt = function vanilla_smelt(
     input,
     output,
     food
@@ -24,7 +25,7 @@ ServerEvents.recipes((event) => {
    * @param {item[]} items
    * @param {item} result
    */
-  global.server.recipes.shapex = function shapex(items, result) {
+  global.server.recipes.shaped.shapex = function shapex(items, result) {
     event
       .shaped(result, ["ABC", "DEF", "GHI"], {
         A: items[0],
@@ -54,7 +55,7 @@ ServerEvents.recipes((event) => {
    * @param {int[]} slot_input crafting slot id
    * @param {item} output
    */
-  global.server.recipes.shaped_plus = function shaped_plus(
+  global.server.recipes.shaped.shaped_plus = function shaped_plus(
     item_input,
     slot_input,
     output
