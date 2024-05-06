@@ -1,3 +1,4 @@
+//priority 9
 if (global.startup.mods.mekanism) {
   StartupEvents.registry("fluid", (event) => {
     global.startup.GasToFluid = function GasToFluid(
