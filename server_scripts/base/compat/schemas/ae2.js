@@ -1,13 +1,5 @@
 if (global.startup.mods.ae2) {
   ServerEvents.recipes((event) => {
-    global.server.recipes.compat = {
-      ae2 : {
-        charger: ()=>{},
-        entropy: ()=>{},
-        inscriber: ()=>{},
-        transform: ()=>{},
-      }
-    }
     /**
      *
      * @param {item} input
