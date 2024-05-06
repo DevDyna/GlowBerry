@@ -1,9 +1,11 @@
 if (global.startup.mods.reactive) {
   ServerEvents.recipes((event) => {
-    //transmutation
-    //
-    //let transmute = reactive(event,false)
-    //let transmute_tag = reactive(event,true)
+
+    global.server.recipes.compat = {
+      reactive : {
+        transmute: ()=>{}
+      }
+    }
 
     /**
      *
