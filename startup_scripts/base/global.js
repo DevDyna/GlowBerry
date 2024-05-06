@@ -6,6 +6,8 @@ global.startup.mods = {
   ten3 : Platform.isLoaded('ten3'),
   mekanism: Platform.isLoaded('mekanism'),
   twilightforest: Platform.isLoaded('twilightforest'),
+  homespun: Platform.isLoaded('homespun'),
+  ae2: Platform.isLoaded('ae2'),
 };
 
 global.server.EasyId = true
