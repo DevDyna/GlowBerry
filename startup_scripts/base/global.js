@@ -8,6 +8,9 @@ global.startup.mods = {
   twilightforest: Platform.isLoaded('twilightforest'),
   homespun: Platform.isLoaded('homespun'),
   ae2: Platform.isLoaded('ae2'),
+  pnc: Platform.isLoaded('pnc'),
+  reactive: Platform.isLoaded('reactive'),
+  bluepower: Platform.isLoaded('bluepower'),
 };
 
 global.server.EasyId = true
