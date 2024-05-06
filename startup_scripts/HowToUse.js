@@ -2,9 +2,15 @@
 //PRIORITY NEED TO BE BELOW ZERO TO WORK!
 
 //#### ---------------------------------SETTINGS--------------------------------- ####//
-global.server.pnc.datagen.keepPNC = false
+//## --------------------Tooltip-------------------- ##//
+/* Toggle of default disabled items to show a fancy tooltip
+*/
+global.client.DefaultTooltip = true
 
-
+//## --------------------Tooltip-------------------- ##//
+/* Toggle of default disabled items to show a fancy tooltip
+*/
+global.any.enableExamples = false
 
 
 
@@ -13,10 +19,8 @@ global.server.pnc.datagen.keepPNC = false
 //## --------------------Compat-------------------- ##//
 //# -----------PneumaticCraftDatagen----------- #//
 /* Allow to keep/remove any fuel quality and amadron trades from PNC
-*    true  -> keep all default values
-*    false -> remove any default values
 */
-global.server.pnc.datagen.keepPNC = false
+global.server.datagen.pnc.keep = false
 
 //#### ---------------------------------ItemRemover--------------------------------- ####//
 /* Allow to remove completly from your modpack items
@@ -35,8 +39,24 @@ global.disabledItem = [
 
 
 
-
-
+//## --------------------Compat-------------------- ##//
+//# -----------JEI NBT Cleaner----------- #//
+/* Remove multiple items from other mods with NBT without remove entirely
+*
+*
+* How to add:
+* - ingame </kubejs hand> and pickup the item-id
+* - paste inside the list like that : -> 'minecraft:stone', <- 
+* - repeat for any item you want remove
+*
+* What it will do:
+* - it remove any item with same id
+* - it re-add it without nbt one single time
+*
+*/
+global.clearNBT = [
+//'minecraft:stone',
+]
 
 
 
