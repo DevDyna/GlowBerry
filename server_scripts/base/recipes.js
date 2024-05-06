@@ -7,11 +7,11 @@ ServerEvents.recipes((event) => {
    * @param {item} output
    * @param {boolean} food when true return as a food item | when false return as a ore item
    */
-  global.server.recipes.processing.vanilla_smelt = function vanilla_smelt(
+  global.server.recipes.processing.vanilla_smelt = (
     input,
     output,
     food
-  ) {
+  ) =>{
     event.smelting(output, input);
     if (food) {
       event.smoking(output, input);
@@ -25,7 +25,7 @@ ServerEvents.recipes((event) => {
    * @param {item[]} items
    * @param {item} result
    */
-  global.server.recipes.shaped.shapex = function shapex(items, result) {
+  global.server.recipes.shaped.shapex = (items, result) =>{
     event
       .shaped(result, ["ABC", "DEF", "GHI"], {
         A: items[0],
@@ -55,11 +55,11 @@ ServerEvents.recipes((event) => {
    * @param {int[]} slot_input crafting slot id
    * @param {item} output
    */
-  global.server.recipes.shaped.shaped_plus = function shaped_plus(
+  global.server.recipes.shaped.shaped_plus = (
     item_input,
     slot_input,
     output
-  ) {
+  ) =>{
     let recipe = [[], [], []];
     for (let i = 0; i < slot_input.length; i++) {
       for (let j = 0; j < slot_input[i].length; j++) {
@@ -76,39 +76,40 @@ ServerEvents.recipes((event) => {
     event.shaped(output, recipe).id(RegX(id + output));
   };
 
-  //------------------------------------------------------------------------------------------//
-
-  /**
-   *
-   * @param {item|item[]} nugget when array , ingot will be optional
-   * @param {item} ingot
-   */
-  global.server.recipes.shapeless.nine_to_one = function nine_to_one(
-    nugget,
-    ingot
-  ) {
-    if (typeof ingot == "undefined") {
-      less(["9x " + nugget[0]], nugget[1]);
-      less([nugget[1]], "9x " + nugget[0]);
-    } else {
-      less(["9x " + nugget], ingot);
-      less([ingot], "9x " + nugget);
-    }
-  };
-  //------------------------------------------------------------------------------------------//
+    //------------------------------------------------------------------------------------------//
 
   /**
    *
    * @param {item[]} inputs [1,2,3,4,5,6,7,8,9] or just 9x -item- to full all slots
    * @param {item} output result
    */
-  global.server.recipes.shapeless.RecipeHelper = function RecipeHelper(
+  global.server.recipes.shapeless.RecipeHelper = (
     inputs,
     output
-  ) {
+  ) =>{
     event
       .shapeless(output, inputs)
       .id(RegX(inputs + "_" + output).replace(/\s/g, "_"));
+  };
+  //------------------------------------------------------------------------------------------//
+
+
+  /**
+   *
+   * @param {item|item[]} nugget when array , ingot will be optional
+   * @param {item} ingot
+   */
+  global.server.recipes.shapeless.nine_to_one = (
+    nugget,
+    ingot
+  ) =>{
+    if (typeof ingot == "undefined") {
+      global.server.recipes.shapeless.RecipeHelper(["9x " + nugget[0]], nugget[1]);
+      global.server.recipes.shapeless.RecipeHelper([nugget[1]], "9x " + nugget[0]);
+    } else {
+      global.server.recipes.shapeless.RecipeHelper(["9x " + nugget], ingot);
+      global.server.recipes.shapeless.RecipeHelper([ingot], "9x " + nugget);
+    }
   };
 
   //------------------------------------------------------------------------------------------//
@@ -118,10 +119,10 @@ ServerEvents.recipes((event) => {
    * @param {item[]} output
    * @param {item[]} input
    */
-  global.server.recipes.stonecutter.MultiCutting = function MultiCutting(
+  global.server.recipes.stonecutter.MultiCutting = (
     output,
     input
-  ) {
+  ) =>{
     for (let j = 0; j < input.length; j++) {
       for (let i = 0; i < output.length; i++) {
         event
