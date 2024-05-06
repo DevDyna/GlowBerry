@@ -5,7 +5,7 @@ let $EventBuses,
   $FloatingLong,
   GASES;
 
-if (global.mods.mekanism) {
+if (global.startup.mods.mekanism) {
   $EventBuses = Java.loadClass("dev.architectury.platform.forge.EventBuses");
   $GasDeferredRegister = Java.loadClass(
     "mekanism.common.registration.impl.GasDeferredRegister"
