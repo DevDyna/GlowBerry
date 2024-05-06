@@ -1,3 +1,4 @@
+//priority 10
 ServerEvents.tags("item", (event) => {
   //remove all item tag from disabled items
   event.removeAllTagsFrom(global.disabledItem);
