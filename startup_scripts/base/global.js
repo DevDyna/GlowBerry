@@ -1,14 +1,14 @@
 //priority 1
-global.mods = { 
+global.startup.mods = { 
   farmersdelight: Platform.isLoaded('farmersdelight'),
   create : Platform.isLoaded('create'),
   tombstone : Platform.isLoaded('tombstone'),
   ten3 : Platform.isLoaded('ten3'),
   mekanism: Platform.isLoaded('mekanism'),
+  twilightforest: Platform.isLoaded('twilightforest'),
 };
 
-global.startup
-global.server
+global.server.EasyId = true
 global.client.tip(global.disabledItem,'Item Disabled')
 
 global.nc = { energy: 1.0, speed: 1.0, rad: 0.0 }; //global value for NC
