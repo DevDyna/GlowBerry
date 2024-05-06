@@ -1,9 +1,4 @@
 if (global.startup.mods.ars_nouveau) {
-  global.server.recipes.compat = {
-    ars_nouveau : {
-      enchanting_apparatus: ()=>{}
-    }
-  }
   ServerEvents.recipes((event) => {
     global.server.recipes.compat.ars_nouveau.enchanting_apparatus =
       function enchanting_apparatus(core, input, output, source, nbt) {
