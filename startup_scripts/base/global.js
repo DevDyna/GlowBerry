@@ -21,42 +21,52 @@ global.server = {
     pnc: { keep: Boolean },
   },
   recipes: {
-    processing: {},
-    shaped: {},
-    shapeless: {},
-    stonecutter: {},
+    processing: {
+      vanilla_smelt: ()=>{}
+    },
+    shaped: {
+      shapex: ()=>{},
+      shaped_plus : ()=>{}
+    },
+    shapeless: {
+      nine_to_one: ()=>{},
+      RecipeHelper:()=>{}
+    },
+    stonecutter: {
+      MultiCutting: ()=>{}
+    },
     compat: {
       pnc: {
         assembly: {
-          drill: Function,
-          laser: Function,
-          drill_laser: Function,
+          drill: ()=>{},
+          laser: ()=>{},
+          drill_laser: ()=>{},
         },
       },
       ars_nouveau: {
-        enchanting_apparatus: Function,
+        enchanting_apparatus: ()=>{},
       },
       twilightforest: {
-        uncrafting: Function,
+        uncrafting: ()=>{},
       },
       reactive: {
-        transmute: Function,
+        transmute: ()=>{},
       },
       homespun: {
-        crushing: Function,
-        evaporating: Function,
+        crushing: ()=>{},
+        evaporating: ()=>{},
       },
       create: {
-        ItemApplicator: Function,
+        ItemApplicator: ()=>{},
       },
         bluepower : {
-          alloy: Function
+          alloy: ()=>{}
         },
           ae2 : {
-            charger: Function,
-            entropy: Function,
-            inscriber: Function,
-            transform: Function,
+            charger: ()=>{},
+            entropy: ()=>{},
+            inscriber: ()=>{},
+            transform: ()=>{},
           },
     },
   },
