@@ -1,6 +1,6 @@
 let $MysteriousItemConversionCategory, $ConversionRecipe;
 
-if (global.mods.create) {
+if (global.startup.mods.create) {
   /**
    *
    * @param {item} input
