@@ -1,10 +1,4 @@
 if (global.startup.mods.create) {
-  global.server.recipes.compat = {
-    create : {
-      ItemApplicator: ()=>{}
-    }
-  }
-
   ServerEvents.recipes((event) => {
     /**
      *
