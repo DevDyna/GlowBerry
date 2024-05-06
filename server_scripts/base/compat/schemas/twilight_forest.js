@@ -8,27 +8,22 @@ if (global.startup.mods.twilightforest) {
      * @param {int} output_count
      * @param {int} cost experience cost
      */
-    global.server.recipes.compat.twilightforest.uncrafting = function uncrafting(
-      input,
-      pattern,
-      output,
-      output_count,
-      cost
-    ) {
-      event.custom({
-        type: "twilightforest:uncrafting",
-        cost: cost,
-        count: output_count,
-        ingredient: {
-          item: input,
-        },
-        key: {
-          A: {
-            item: output,
+    global.server.recipes.compat.twilightforest.uncrafting =
+      function uncrafting(input, pattern, output, output_count, cost) {
+        event.custom({
+          type: "twilightforest:uncrafting",
+          cost: cost,
+          count: output_count,
+          ingredient: {
+            item: input,
           },
-        },
-        pattern: pattern,
-      });
-    };
+          key: {
+            A: {
+              item: output,
+            },
+          },
+          pattern: pattern,
+        });
+      };
   });
 }
