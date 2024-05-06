@@ -1,10 +1,5 @@
 if (global.startup.mods.twilightforest) {
   ServerEvents.recipes((event) => {
-    global.server.recipes.compat = {
-      twilightforest : {
-        uncrafting: ()=>{}
-      }
-    }
     /**
      *
      * @param {item} input
