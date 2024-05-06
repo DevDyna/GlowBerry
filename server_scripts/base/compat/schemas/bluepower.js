@@ -1,4 +1,9 @@
 if (global.startup.mods.bluepower) {
+  global.server.recipes.compat = {
+    bluepower : {
+      alloy: ()=>{}
+    }
+  }
   ServerEvents.recipes((event) => {
     //alloy_smelting bluepower
     //
