@@ -33,7 +33,7 @@ global.startup.compat.pnc.utils = {
 if(global.startup.mods.pnc){
 ServerEvents.highPriorityData((event) => {
 
-  if(!global.server.datagen.keepPNC){
+  if(!global.server.datagen.pnc.keep){
   global.startup.compat.pnc.utils.fuels.forEach((data) => {
     event.addJson(`pneumaticcraft:recipes/pneumaticcraft_fuels/${data}`, {});
   });
@@ -51,7 +51,7 @@ ServerEvents.highPriorityData((event) => {
    * @param {itemtag} tag 
    * @param {int} amount 
    */
-  function fuel_quality(fuel,air_per_bucket,burn_rate,tag,amount){
+  global.server.recipes.compat.pnc.fuel_quality = function fuel_quality(fuel,air_per_bucket,burn_rate,tag,amount){
   event.addJson(`pneumaticcraft:recipes/pneumaticcraft_fuels/`+(fuel).replace(/[^a-zA-Z0-9_ ]/g, ""), {
     type: "pneumaticcraft:fuel_quality",
     air_per_bucket: air_per_bucket,
