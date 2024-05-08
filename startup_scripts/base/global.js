@@ -22,52 +22,52 @@ global.server = {
   },
   recipes: {
     processing: {
-      vanilla_smelt: ()=>{}
+      vanilla_smelt: Function,
     },
     shaped: {
-      shapex: ()=>{},
-      shaped_plus : ()=>{}
+      shapex: Function,
+      shaped_plus: Function,
     },
     shapeless: {
-      nine_to_one: ()=>{},
-      RecipeHelper:()=>{}
+      nine_to_one: Function,
+      RecipeHelper: Function,
     },
     stonecutter: {
-      MultiCutting: ()=>{}
+      MultiCutting: Function,
     },
     compat: {
       pnc: {
         assembly: {
-          drill: ()=>{},
-          laser: ()=>{},
-          drill_laser: ()=>{},
+          drill: Function,
+          laser: Function,
+          drill_laser: Function,
         },
       },
       ars_nouveau: {
-        enchanting_apparatus: ()=>{},
+        enchanting_apparatus: Function,
       },
       twilightforest: {
-        uncrafting: ()=>{},
+        uncrafting: Function,
       },
       reactive: {
-        transmute: ()=>{},
+        transmute: Function,
       },
       homespun: {
-        crushing: ()=>{},
-        evaporating: ()=>{},
+        crushing: Function,
+        evaporating: Function,
       },
       create: {
-        ItemApplicator: ()=>{},
+        ItemApplicator: Function,
       },
-        bluepower : {
-          alloy: ()=>{}
-        },
-          ae2 : {
-            charger: ()=>{},
-            entropy: ()=>{},
-            inscriber: ()=>{},
-            transform: ()=>{},
-          },
+      bluepower: {
+        alloy: Function,
+      },
+      ae2: {
+        charger: Function,
+        entropy: Function,
+        inscriber: Function,
+        transform: Function,
+      },
     },
   },
 };
