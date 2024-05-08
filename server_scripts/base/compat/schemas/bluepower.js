@@ -1,16 +1,16 @@
 if (global.startup.mods.bluepower) {
-  ServerEvents.recipes((event) => {
-    //alloy_smelting bluepower
-    //
-    //		WARNING: MORE THAT 1 TYPE CAUSE ISSUES FROM BLUEPOWER
-    //
-    /*----------------------------------------------------------------------------------------------*/
-    global.server.recipes.compat.bluepower.alloy = function alloy(
-      inputs_name,
-      inputs_count,
-      output_name,
-      output_count
-    ) {
+  //alloy_smelting bluepower
+  //
+  //		WARNING: MORE THAT 1 TYPE CAUSE ISSUES FROM BLUEPOWER
+  //
+  /*----------------------------------------------------------------------------------------------*/
+  global.server.recipes.compat.bluepower.alloy = (
+    inputs_name,
+    inputs_count,
+    output_name,
+    output_count
+  ) => {
+    ServerEvents.recipes((event) => {
       let ingredients = [];
 
       for (let i = 0; i < inputs_name.length; i++) {
@@ -37,6 +37,6 @@ if (global.startup.mods.bluepower) {
               output_count
           )
         );
-    };
-  });
+    });
+  };
 }
