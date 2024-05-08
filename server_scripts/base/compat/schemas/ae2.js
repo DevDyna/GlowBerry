@@ -1,11 +1,11 @@
 if (global.startup.mods.ae2) {
-  ServerEvents.recipes((event) => {
-    /**
-     *
-     * @param {item} input
-     * @param {output} output
-     */
-    global.server.recipes.compat.ae2.charger = function charger(input, output) {
+  /**
+   *
+   * @param {item} input
+   * @param {output} output
+   */
+  global.server.recipes.compat.ae2.charger = (input, output) => {
+    ServerEvents.recipes((event) => {
       event
         .custom({
           type: "ae2:charger",
@@ -17,23 +17,25 @@ if (global.startup.mods.ae2) {
           },
         })
         .id(RegX(input + "_" + output));
-    };
+    });
+  };
 
-    /**
-     *
-     * @param {string} mode heat | cool
-     * @param {string} type_input block | fluid
-     * @param {item|block} input_id
-     * @param {string} type_output block | fluid | drops
-     * @param {item|block} output_id
-     */
-    global.server.recipes.compat.ae2.entropy = function entropy(
-      mode,
-      type_input,
-      input_id,
-      type_output,
-      output_id
-    ) {
+  /**
+   *
+   * @param {string} mode heat | cool
+   * @param {string} type_input block | fluid
+   * @param {item|block} input_id
+   * @param {string} type_output block | fluid | drops
+   * @param {item|block} output_id
+   */
+  global.server.recipes.compat.ae2.entropy = (
+    mode,
+    type_input,
+    input_id,
+    type_output,
+    output_id
+  ) => {
+    ServerEvents.recipes((event) => {
       let md, t_in, t_out;
       switch (mode) {
         case "heat" || "cool":
@@ -96,19 +98,17 @@ if (global.startup.mods.ae2) {
         mode: mode,
         output: t_out,
       });
-    };
+    });
+  };
 
-    /**
-     *
-     * @param {'press'|'inscribe'} type_mode press dont use item
-     * @param {item[]} input middle top bottom
-     * @param {item} output
-     */
-    global.server.recipes.compat.ae2.inscriber = function inscriber(
-      type_mode,
-      input,
-      output
-    ) {
+  /**
+   *
+   * @param {'press'|'inscribe'} type_mode press dont use item
+   * @param {item[]} input middle top bottom
+   * @param {item} output
+   */
+  global.server.recipes.compat.ae2.inscriber = (type_mode, input, output) => {
+    ServerEvents.recipes((event) => {
       switch (input.length) {
         case 1:
           event
@@ -170,23 +170,25 @@ if (global.startup.mods.ae2) {
         default:
           throw "ERROR INSCRIBER RECIPES";
       }
-    };
+    });
+  };
 
-    /**
-     *
-     * @param {"explosion"|"fluid"} type
-     * @param {item[]} input only 2 items accept
-     * @param {item} output
-     * @param {int} count
-     * @param {liquid} fluid optional when type = explosion
-     */
-    global.server.recipes.compat.ae2.transform = function transform(
-      type,
-      input,
-      output,
-      count,
-      fluid
-    ) {
+  /**
+   *
+   * @param {"explosion"|"fluid"} type
+   * @param {item[]} input only 2 items accept
+   * @param {item} output
+   * @param {int} count
+   * @param {liquid} fluid optional when type = explosion
+   */
+  global.server.recipes.compat.ae2.transform = (
+    type,
+    input,
+    output,
+    count,
+    fluid
+  ) => {
+    ServerEvents.recipes((event) => {
       let type_rec, items;
 
       switch (type) {
@@ -231,6 +233,6 @@ if (global.startup.mods.ae2) {
           item: output,
         },
       });
-    };
-  });
+    });
+  };
 }
