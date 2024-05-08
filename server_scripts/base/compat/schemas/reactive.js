@@ -1,20 +1,20 @@
 if (global.startup.mods.reactive) {
-  ServerEvents.recipes((event) => {
-    /**
-     *
-     * @param {item} input
-     * @param {item} output
-     * @param {reactive.elements} elements [caustic] [soul] [body] [light] [mind] [verdant]
-     * @param {int} min
-     * @param {int} cost
-     */
-    global.server.recipes.compat.reactive.transmute = function transmute(
-      input,
-      output,
-      elements,
-      min,
-      cost
-    ) {
+  /**
+   *
+   * @param {item} input
+   * @param {item} output
+   * @param {reactive.elements} elements [caustic] [soul] [body] [light] [mind] [verdant]
+   * @param {int} min
+   * @param {int} cost
+   */
+  global.server.recipes.compat.reactive.transmute = (
+    input,
+    output,
+    elements,
+    min,
+    cost
+  ) => {
+    ServerEvents.recipes((event) => {
       event.custom({
         type: "reactive:transmutation",
         reactant: ItemOrTag(input),
@@ -23,6 +23,6 @@ if (global.startup.mods.reactive) {
         min: min,
         cost: cost,
       });
-    };
-  });
+    });
+  };
 }
