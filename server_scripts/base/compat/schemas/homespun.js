@@ -1,12 +1,12 @@
 if (global.startup.mods.homespun) {
-  ServerEvents.recipes((event) => {
-    global.server.recipes.compat.homespun.crushing = function crushing(
-      input,
-      output,
-      count,
-      fluid,
-      amount
-    ) {
+  global.server.recipes.compat.homespun.crushing = (
+    input,
+    output,
+    count,
+    fluid,
+    amount
+  ) => {
+    ServerEvents.recipes((event) => {
       event.custom({
         type: "homespun:tub_crushing",
         input_item: {
@@ -21,15 +21,17 @@ if (global.startup.mods.homespun) {
           amount: amount,
         },
       });
-    };
+    });
+  };
 
-    global.server.recipes.compat.homespun.evaporating = function evaporating(
-      fluid,
-      amount,
-      time,
-      output,
-      count
-    ) {
+  global.server.recipes.compat.homespun.evaporating = (
+    fluid,
+    amount,
+    time,
+    output,
+    count
+  ) => {
+    ServerEvents.recipes((event) => {
       event.custom({
         type: "homespun:evaporating",
         output_item: {
@@ -42,6 +44,6 @@ if (global.startup.mods.homespun) {
         },
         time: time,
       });
-    };
-  });
+    });
+  };
 }
