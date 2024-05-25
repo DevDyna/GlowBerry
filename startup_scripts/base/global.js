@@ -13,6 +13,7 @@ global.startup = {
     reactive: Boolean,
     bluepower: Boolean,
     ars_nouveau: Boolean,
+    thermal : Boolean,
   },
 };
 
@@ -68,6 +69,9 @@ global.server = {
         inscriber: Function,
         transform: Function,
       },
+      thermal: {
+        brewer: Function,
+      },
     },
   },
 };
@@ -90,3 +94,4 @@ global.startup.mods.pnc = Platform.isLoaded("pneumaticcraft");
 global.startup.mods.reactive = Platform.isLoaded("reactive");
 global.startup.mods.bluepower = Platform.isLoaded("bluepower");
 global.startup.mods.ars_nouveau = Platform.isLoaded("ars_nouveau");
+global.startup.mods.thermal = Platform.isLoaded("thermal");
