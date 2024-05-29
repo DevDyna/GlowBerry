@@ -1,3 +1,11 @@
+/**
+ * @template {number} int
+ * @template {number} float
+ * @template {#&item} itemtag
+ * @template {string} item
+ * @template {string} fluid
+ */
+
 if (global.startup.mods.ars_nouveau) {
   global.server.recipes.compat.ars_nouveau.enchanting_apparatus = (
     core,

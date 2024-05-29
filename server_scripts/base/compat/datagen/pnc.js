@@ -1,3 +1,11 @@
+/**
+ * @template {number} int
+ * @template {number} float
+ * @template {#&item} itemtag
+ * @template {string} item
+ * @template {string} fluid
+ */
+
 global.server.datagen.pnc = {
   utils: {
     fuels: [
@@ -30,6 +38,7 @@ global.server.datagen.pnc = {
     ],
   },
 };
+
 
 if (global.startup.mods.pnc) {
   ServerEvents.highPriorityData((event) => {

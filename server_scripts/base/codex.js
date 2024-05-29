@@ -1,5 +1,12 @@
 //priority 999
 
+/**
+ * @template {number} int
+ * @template {#&item} itemtag
+ * @template {string} item
+ * @template {string} fluid
+ */
+
 /* //RegExp to replace :
 function RegN(string) {
 return string.replace(/:/g, '_')

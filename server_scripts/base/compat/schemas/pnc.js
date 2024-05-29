@@ -1,3 +1,11 @@
+/**
+ * @template {number} int
+ * @template {number} float
+ * @template {#&item} itemtag
+ * @template {string} item
+ * @template {string} fluid
+ */
+
 if (global.startup.mods.pnc) {
   global.server.recipes.compat.pnc.assembly.drill = (input, output, count) => {
     ServerEvents.recipes((event) => {
