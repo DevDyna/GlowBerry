@@ -8,9 +8,9 @@ ServerEvents.recipes((event) => {
 //vanilla recipes utils
 global.server.recipes.shaped.shapex(['minecraft:dirt','minecraft:stone'],'minecraft:bedrock')
 
-global.server.recipes.shaped.shaped_plus(['minecraft:bedrock','minecraft:dirt'],[[1,2],[3,4]],'minecraft:cobblestone')
+global.server.recipes.shaped.shapedPlus(['minecraft:bedrock','minecraft:dirt'],[[1,2],[3,4]],'minecraft:cobblestone')
 
-global.server.recipes.shapeless.nine_to_one('minecraft:iron_block','minecraft:copper_block')
+global.server.recipes.shapeless.nineToOne('minecraft:iron_block','minecraft:copper_block')
 
 global.server.recipes.shapeless.RecipeHelper(['minecraft:bookshelf','minecraft:deepslate'],'minecraft:gravel')
 
