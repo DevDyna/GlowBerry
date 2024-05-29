@@ -1,4 +1,6 @@
 //priority 10
+
+// STARTUP INITIALIZATION
 global.startup = {
   mods: {
     farmersdelight: Boolean,
@@ -14,9 +16,12 @@ global.startup = {
     bluepower: Boolean,
     ars_nouveau: Boolean,
     thermal : Boolean,
+    botanypots : Boolean,
+    mysticalagriculture: Boolean,
   },
 };
 
+//SERVER INITIALIZATION
 global.server = {
   datagen: {
     pnc: { keep: Boolean },
@@ -72,16 +77,21 @@ global.server = {
       thermal: {
         brewer: Function,
       },
+      botanypots:{
+        AddSoil:Function,
+        AddInteraction:Function,
+        AddFertilizer:Function,
+        AddSeed:Function
+      },
+      mysticalagriculture:{
+
+      }
     },
   },
 };
 
-global.client = { DefaultTooltip: Boolean };
-
-global.any = {
-  enableExamples: Boolean,
-};
-
+//MOD ENABLE FLAGS
+//global.startup.mods.modname = Platform.isLoaded("mod-id");
 global.startup.mods.farmersdelight = Platform.isLoaded("farmersdelight");
 global.startup.mods.create = Platform.isLoaded("create");
 global.startup.mods.tombstone = Platform.isLoaded("tombstone");
@@ -95,3 +105,13 @@ global.startup.mods.reactive = Platform.isLoaded("reactive");
 global.startup.mods.bluepower = Platform.isLoaded("bluepower");
 global.startup.mods.ars_nouveau = Platform.isLoaded("ars_nouveau");
 global.startup.mods.thermal = Platform.isLoaded("thermal");
+global.startup.mods.botanypots = Platform.isLoaded("botanypots");
+global.startup.mods.mysticalagriculture = Platform.isLoaded("mystical_agriculture");
+
+//CLIENT INITIALIZATION
+global.client = { DefaultTooltip: Boolean };
+
+//CORE
+global.any = {
+  enableExamples: Boolean,
+};
