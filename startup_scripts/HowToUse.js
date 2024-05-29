@@ -12,8 +12,13 @@ global.client.DefaultTooltip = true
 */
 global.any.enableExamples = true
 
+/*
+server side
+https://github.com/DevDyna/GlowBerry/blob/main/server_scripts/base/.example.js#L9
 
-
+client side
+https://github.com/DevDyna/GlowBerry/blob/main/client_scripts/base/.example.js
+*/
 
 
 //## --------------------Compat-------------------- ##//
