@@ -18,6 +18,7 @@ global.startup = {
     thermal : Boolean,
     botanypots : Boolean,
     mysticalagriculture: Boolean,
+    expatternprovider : Boolean,
   },
 };
 
@@ -88,6 +89,14 @@ global.server = {
       }
     },
   },
+  Utils:{
+    compat:{
+      extendedae2:{
+        infinityDisk : Function,
+        customInfinityDisk : Function
+      }
+    }
+  }
 };
 
 //MOD ENABLE FLAGS
@@ -107,6 +116,7 @@ global.startup.mods.ars_nouveau = Platform.isLoaded("ars_nouveau");
 global.startup.mods.thermal = Platform.isLoaded("thermal");
 global.startup.mods.botanypots = Platform.isLoaded("botanypots");
 global.startup.mods.mysticalagriculture = Platform.isLoaded("mystical_agriculture");
+global.startup.mods.extendedae2 = Platform.isLoaded("expatternprovider");
 
 //CLIENT INITIALIZATION
 global.client = { DefaultTooltip: Boolean };
